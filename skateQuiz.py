@@ -4,13 +4,16 @@ print("\nWelcome to the Best Skateboard Quiz.\n Please enter either A, B, and C 
 
 
 
-score = x
-x = 0
+
+score = 0
 
 
  # Question 1
 answer_1 = input("Who was the star of Pro Skater 2?\na) Tony Hawk\nb) Bob Burnquist\nc) Kareem Campbell\n")
 
+while answer_1.lower() != "a":
+    print("That's incorrect, please try again!")
+    break
 if answer_1.lower() == "a":
     print("Correct\n")
     x + 1 
@@ -88,6 +91,8 @@ else:
 
 # Question 10
 answer_10 = input("What part of the body is injured the most in skateboarding?\na) Foot\nb) Wrists\nc) Head\n")
+while answer_10.lower() != "b":
+    print("That's incorrect, please try again")
 if answer_10.lower() == "b":
     print("Correct\n")
     x + 1
@@ -98,4 +103,8 @@ else:
 print(score)
 
 
-    
+#TODO
+# don't let the user input anything other than a b c
+# Lots of repeated code, use a loop
+# change x+=1 to score += 1
+# display the score in a meaningful f string
