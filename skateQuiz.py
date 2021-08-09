@@ -2,13 +2,13 @@ import random
 
 print("\nWelcome to the Best Skateboard Quiz.\n Please enter either A, B, and C to answer the questions.\n Enjoy!\n\n")
 
-def questions (question, answers, correct_answer: str) -> str:
+def questions (question, answers, correct_ans: str) -> str:
      # a function for creating the questions, checking the answer the input and verifying the correct answer
     while True:
         print(question)
         print(answers)
         reponse = input("Please enter answer: \n ")
-        if response == correct_answer:
+        if response == correct_ans:
             print("Good job!")
             return True
         else:
