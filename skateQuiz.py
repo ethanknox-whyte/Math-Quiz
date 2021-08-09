@@ -2,109 +2,38 @@ import random
 
 print("\nWelcome to the Best Skateboard Quiz.\n Please enter either A, B, and C to answer the questions.\n Enjoy!\n\n")
 
-
-
+def questions (question, answers, correct_answer: str) -> str:
+     # a function for creating the questions, checking the answer the input and verifying the correct answer
+    while True:
+        print(question)
+        print(answers)
+        reponse = input("Please enter answer: \n ")
+        if response == correct_answer:
+            print("Good job!")
+            return True
+        else:
+            print("Whoops, that's wrong \n")
+            return False
 
 score = 0
 
 
- # Question 1
-answer_1 = input("Who was the star of Pro Skater 2?\na) Tony Hawk\nb) Bob Burnquist\nc) Kareem Campbell\n")
+# Questions 
+question_1 = ('Who was the star of Pro Skater 2?', ['Tony Hawk, Bob Burnquist, Kareem Campbell'], 'Tony Hawk')
+question_2 = ('What was the biggest stair set ever ollied?', ['El Toro, UC Davis, Lyon 25'], 'Tony Hawnk')
+question_3 = ('Who ollied the biggest stair set?', ['Nyjah Huston, Tony Hawk, Aaron Homoki'], 'Aaron Homoki')
+question_4 = ('Who was the Skate School Teacher in Skate 3?', ['Coach Fred, Coach Frank, Coach Franklin'], 'Coach Frank')
+question_5 = ('Who was the 2021 Olympic Skateboarding Champion?', ['Reef Owen, Nyjah Huston, Yuto Horigome'], 'Yuto Horigome') 
+question_6 = ('Who is the best skateboarder in NZ?', ['Izy Mutu, Bowman Hansen, Theo Clarke'], 'Bowman Hansen')
+question_7 = ('Where was the 2019 X games held?', ['Minneaplois, Los Angeles, Miami'], 'Minneaplois')
+question_8 = ('What was skateboarding originally called?', ['Sidewalk Surfing, Street Surfing, Street Waving'], 'Sidewalk Surfing')
+question_9 = ('How many skateboard decks are made each month?', ['100,000, 1,000,000, 500,000'], '500,000')
+question_10 = ('What part of the body is injured the most in skateboarding?', ['Foot, Wrists, Head'], 'Wrists')
 
-while answer_1.lower() != "a":
-    print("That's incorrect, please try again!")
-    break
-if answer_1.lower() == "a":
-    print("Correct\n")
-    x + 1 
-else:
-    print("Wrong Answer\n")
-
-# Question 2
-answer_2 = input("What was the biggest stair set ever ollied?\na) El Toro\nb) UC Davis\nc) Lyon 25\n")
-
-if answer_2.lower() == "c":
-    print("Correct\n")
-    x + 1
-else:
-    print("Wrong Anwser\n")
-
-#Question 3
-answer_3 = input("Who ollied the biggest stair set?\na) Nyjah Huston\nb) Tony Hawk\nc) Aaron Homoki\n")
-
-if answer_3.lower() == "c":
-    print("Correct\n")
-    x + 1
-else:
-    print("Wrong Answer\n")
-
-# Question 4
-answer_4 = input("Who was the Skate School Teacher in Skate 3?\na) Coach Fred\nb) Coach Frank\nc) Coach Franklin\n")
-
-if answer_4.lower() == "b":
-    print("Correct\n")
-    x + 1
-else:
-    print("Wrong Answer\n")
-
-# Question 5
-answer_5 = input("Who was the 2021 Olympic Skateboarding Champion?\na) Reef Owen\nb) Nyjah Huston\nc) Yuto Horigome\n") 
-
-if answer_5.lower() == "c":
-    print("Correct\n")
-    x + 1
-else:
-    print("Wrong Answer\n")
-
-# Question 6
-answer_6 = input("Who is the 'best' skateboarder in NZ?\na) Izy Mutu\nb) Bowman Hansen\nc) Theo Clarke\n")
-
-if answer_6.lower() == "b":
-    print("Correct\n")
-    x + 1
-else:
-    print("Wrong Answer\n")
-
-# Question 7
-answer_7 = input("Where was the 2019 X games held?\na) Minneaplois\nb) Los Angeles\nc) Miami\n")
-if answer_7.lower() == "b":
-    print("Correct\n")
-    x + 1
-else:
-    print("Wrong Answer\n")
-
-# Question 8 
-answer_8 = input("What was skateboarding originally called?\na) Sidewalk Surfing\nb) Street Surfing\nc) Street Waving\n")
-if answer_8.lower() == "a":
-    print("Correct\n")
-    x + 1
-else:
-    print("Wrong Answer\n")
-
-# Question 9
-answer_9 = input("How many skateboard decks are made each month?\na) 100,000\nb) 1,000,000\nc) 500,000\n")
-if answer_9.lower() == "c":
-    print("Correct\n")
-    x + 1
-else:
-    print("Wrong Answer\n")
-
-# Question 10
-answer_10 = input("What part of the body is injured the most in skateboarding?\na) Foot\nb) Wrists\nc) Head\n")
-while answer_10.lower() != "b":
-    print("That's incorrect, please try again")
-if answer_10.lower() == "b":
-    print("Correct\n")
-    x + 1
-else:
-    print("Wrong Answer\n")
-
-
-print(score)
+questions(question_1[0],question_1[1],question_1[2])
 
 
 #TODO
 # don't let the user input anything other than a b c
 # Lots of repeated code, use a loop
-# change x+=1 to score += 1
 # display the score in a meaningful f string
